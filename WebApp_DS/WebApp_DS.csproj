@@ -6,4 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="Views\Usuario\Index2.cshtml" />
+    <Content Remove="wwwroot\css\style.cs" />
+    <Content Remove="wwwroot\css\style.css" />
+  </ItemGroup>
+
 </Project>
