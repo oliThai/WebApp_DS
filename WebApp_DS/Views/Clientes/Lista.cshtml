@@ -3,26 +3,87 @@
         <h2>Lista de Clientes</h2>
     </div>
     <div class="card-body">
+
+        <div class="row">
+            <div class="col-2">
+                <a href="/Clientes/Cadastro" class="btn btn-success">
+                Novo Cliente    
+                </a>
+            </div>
+            <div class="col-3">
+                <select name="tipoBusca" class="form-control">
+                    <option value="0">Todos os campo</option>
+                    <option value="id">Busca por Id</option>
+                    <option value="nome">Busca por nome</option>
+                    <option value="telefone">Busca por telefone</option>
+                </select>
+            </div>
+
+            <div class="col-4">
+                <input class="form-control" type="text" name="Pesquisa"/>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-info" type="submit">
+                    Pesquisa
+                </button>
+            </div>
+        </div>
         <table class="table table-striped">
             <thead>
-            <th>Código</th>
-            <th>Nome</th>
-            <th>Telefone</th>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th></th>
+            </tr>
             </thead>
             <tr>
                 <td>1</td>
                 <td>Fernanda</td>
                 <td>(16)8956-2356</td>
+                <td>
+                    <a href="/Cliente/Editar/1" class="btn btn-warning">
+                        Editar
+                    </a>
+                    <a href="/Cliente/Compras/1" class="btn btn-primary">
+                        Todas as Compras
+                    </a>
+                    <a href="/Cliente/Excluir/1" class="btn btn-danger">
+                        Excluir
+                    </a>
+                </td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>Joao</td>
                 <td>(16)8956-2356</td>
+                <td>
+                    <a href="/Cliente/Editar/2" class="btn btn-warning">
+                        Editar
+                    </a>
+                    <a href="/Cliente/Compras/2" class="btn btn-primary">
+                        Todas as Compras
+                    </a>
+                    <a href="/Cliente/Excluir/2" class="btn btn-danger">
+                        Excluir
+                    </a>
+                </td>
             </tr>
             <tr>
                 <td>3</td>
                 <td>Maria</td>
                 <td>(16)8956-2356</td>
+                <td>
+                    <a href="/Cliente/Editar/3" class="btn btn-warning">
+                        Editar
+                    </a>
+                    <a href="/Cliente/Compras/3" class="btn btn-primary">
+                        Todas as Compras
+                    </a>
+                    <a href="/Cliente/Excluir/3" class="btn btn-danger">
+                        Excluir
+                    </a>
+                </td>
             </tr>
         </table>
     </div>
