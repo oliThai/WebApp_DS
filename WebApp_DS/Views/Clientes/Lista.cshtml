@@ -1,6 +1,9 @@
-﻿<div>
+﻿@model List<WebApp_DS.Models.ClienteViewModel>
+
+
+<div>
     <div class="card-header">
-        <h2>Lista de Clientes</h2>
+        <h2>Lista de Clientes </h2>
     </div>
     <div class="card-body">
 
@@ -37,54 +40,27 @@
                 <th></th>
             </tr>
             </thead>
-            <tr>
-                <td>1</td>
-                <td>Fernanda</td>
-                <td>(16)8956-2356</td>
-                <td>
-                    <a href="/Cliente/Editar/1" class="btn btn-warning">
-                        Editar
-                    </a>
-                    <a href="/Cliente/Compras/1" class="btn btn-primary">
-                        Todas as Compras
-                    </a>
-                    <a href="/Cliente/Excluir/1" class="btn btn-danger">
-                        Excluir
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Joao</td>
-                <td>(16)8956-2356</td>
-                <td>
-                    <a href="/Cliente/Editar/2" class="btn btn-warning">
-                        Editar
-                    </a>
-                    <a href="/Cliente/Compras/2" class="btn btn-primary">
-                        Todas as Compras
-                    </a>
-                    <a href="/Cliente/Excluir/2" class="btn btn-danger">
-                        Excluir
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Maria</td>
-                <td>(16)8956-2356</td>
-                <td>
-                    <a href="/Cliente/Editar/3" class="btn btn-warning">
-                        Editar
-                    </a>
-                    <a href="/Cliente/Compras/3" class="btn btn-primary">
-                        Todas as Compras
-                    </a>
-                    <a href="/Cliente/Excluir/3" class="btn btn-danger">
-                        Excluir
-                    </a>
-                </td>
-            </tr>
+            <tbody>            
+                @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Nome</td>
+                    <td>@item.Telefone</td>
+                    <td>
+                        <a href="/Clientes/Editar/@item.Id" class="btn btn-warning">
+                            Editar
+                        </a>
+                        <a href="/Clientes/Compras/@item.Id" class="btn btn-primary">
+                            Todas as Compras
+                        </a>
+                        <a href="/Clientes/Excluir/@item.Id" class="btn btn-danger">
+                            Excluir
+                        </a>
+                </tr>
+            }
+            </tbody>
+
         </table>
     </div>
 </div>
