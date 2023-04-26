@@ -1,8 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using WebApp_DS;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+//conexão com o banco 
+builder.Services.AddDbContext<Contexto>(
+    option => option.UseSqlServer("Server=C3PO; Database=DEV_SERV_THAIS; Trusted_Connection=True;")
+);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
