@@ -7,10 +7,11 @@ namespace WebApp_DS
     {
         public Contexto(DbContextOptions<Contexto> opt): base(opt) 
         {
-
-
         }
 
         public DbSet<Produtos> PRODUTOS { get; set; }
+        public DbSet<Categoria> CATEGORIAS{ get; set; }
+        public DbSet<PermissaoEntidade> PERMISSAO{ get; set; }
+
     }
 }
