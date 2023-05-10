@@ -2,10 +2,16 @@
 
     <form action="/Categoria/SalvarDados" method="post">
         <label>Nome</label>
-        <input name="Nome" type="text"/>
+        <input name="Nome" type="text" class="form-control"/>
     <label>Ativo</label>
-        <input type="checkbox" checked name="Ativo" />
-        <button type="submit">
-            Salvar Alter
+        @*<input type="checkbox" checked name="Ativo" />*@
+
+        <select name="Ativo" class="form-control">
+            <option value="true">Ativada</option>
+            <option value="false">Desativado</option>
+
+        </select>
+        <button class="btn btn-success m-2" type="submit">
+            Salvar
         </button>
     </form>

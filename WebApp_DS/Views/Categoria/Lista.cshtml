@@ -1,6 +1,60 @@
 ﻿@model List<WebApp_DS.Entidades.Categoria>
+<div class="card">
+    <div class="card-header">
+        <h2>Lista de Categorias</h2>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-2">
+                <a href="/Categorias/Cadastro" class="btn btn-success">Nova Categoria</a>
+            </div>
+            <form action="/Categoria/lista" method="get">
+                <div class="col-4">
+                    <input class="form-control" type="text" name="pesquisa" />
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-info" type="submit">Pesquisar</button>
+                </div>
+            </form>
+        </div>
 
-@foreach(var categoria in Model)
-{
-    <p>@categoria.NOME - @categoria.ID</p>
-}
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>Ativo</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var categoria in Model)
+                {
+
+                    <tr>
+                        <td>@categoria.ID</td>
+                        <td>@categoria.NOME</td>
+                        <td>
+                            @if (categoria.ATIVO)
+                                    
+                            {
+                                <input type="checkbox" checked="checked" disabled />
+                            }
+                            else
+                            {
+                                <input type="checkbox" disabled />
+
+                            }
+                        </td>
+                        <td>
+                            <a href="/Categoria/Editar/@categoria.ID" class="btn btn-warning">Editar</a>
+                            <a href="/Categoria/Excluir/@categoria.ID" class="btn btn-danger">Excluir</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
