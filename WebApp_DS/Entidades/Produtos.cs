@@ -6,5 +6,8 @@
         public string DESCRICAO { get; set; }
         public decimal VALOR { get; set; }
         public bool ATIVO { get; set; }
+
+        public int CATEGORIA_ID { get; set; }
+        public Categoria CATEGORIA { get; set;}
     }
 }
