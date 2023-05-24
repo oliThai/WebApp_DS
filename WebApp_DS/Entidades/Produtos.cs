@@ -7,7 +7,7 @@
         public decimal VALOR { get; set; }
         public bool ATIVO { get; set; }
 
-        public int CATEGORIA_ID { get; set; }
+        public int CATEGORIAID { get; set; }
         public Categoria CATEGORIA { get; set;}
     }
 }

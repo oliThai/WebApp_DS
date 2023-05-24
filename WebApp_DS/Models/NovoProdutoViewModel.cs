@@ -2,7 +2,7 @@
 namespace WebApp_DS.Models
 
 {
-    public class NovoProdutoViewModel
+    public class NovoProdutoViewModel : Produtos
     {
         public NovoProdutoViewModel() { 
         

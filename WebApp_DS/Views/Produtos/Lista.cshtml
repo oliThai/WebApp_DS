@@ -1,0 +1,41 @@
+﻿@model List<WebApp_DS.Entidades.Produtos>
+
+<div class="card">
+    <div class="card-hear">
+        Lista de Produtos
+    </div>
+
+    <div class="card-body">
+
+        <table class="table table-spriped">
+            <thead>
+                <tr>
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        Descrição do Produto
+                    </th>
+                    <th>
+                        Valor
+                    </th>
+                    <th>
+                        Categoira
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var produtos in Model)
+                {
+                    <tr>
+                        <td>@produtos.ID</td>
+                        <td>@produtos.DESCRICAO</td>
+                        <td>@produtos.VALOR</td>
+                        <td>@produtos.CATEGORIA.NOME</td>
+                        <td></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+﻿@model WebApp_DS.Models.NovoProdutoViewModel
+
+<div class="row">
+    <div class="offset-md-4 col-md-4">
+        <div class="card">
+            <div class="card-header">
+                Cadastro de Produtos
+            </div>
+            <div class="card-body">
+                <form action="/Produtos/SalvarDados" method="post">
+                    <label>Descrição de Produtos</label>
+                    <input type="text" class="form-control" name="DESCRICAO" />
+                    <br />
+                    <label>Valor</label>
+                    <input type="text" name="VALOR" class="form-control"/>
+                    <br />
+
+
+                    <label>Ativo</label>
+                    <select name="ATIVO" class="form-control">
+                        <option value="true">Ativo</option>
+                        <option value="false">Inativo</option>
+                    </select>
+                    <br />
+
+
+                    <label>Lista de Categoria</label>
+                    <select name="CATEGORIAID" class="form-control">
+                        <option value="0">Selecione uma categoria</option>
+                        @foreach(var categoria in Model.ListaCategorias)
+                        {
+                            <option value="@categoria.ID">@categoria.NOME</option>
+                        }
+                    </select>
+                    <br />
+                    <button type="submit" class="btn btn-success">Salvar Produtos</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+

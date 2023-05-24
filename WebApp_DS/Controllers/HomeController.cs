@@ -17,7 +17,7 @@ namespace WebApp_DS.Controllers
 
         public IActionResult Index()
         {
-            return View(db.PRODUTOS.ToList());
+            return View();
         }
 
         public IActionResult Privacy()
