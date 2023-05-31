@@ -6,7 +6,7 @@
         public string DESCRICAO { get; set; }
         public decimal VALOR { get; set; }
         public bool ATIVO { get; set; }
-
+        public string CaminhoImagem { get; set; }
         public int CATEGORIAID { get; set; }
         public Categoria CATEGORIA { get; set;}
     }

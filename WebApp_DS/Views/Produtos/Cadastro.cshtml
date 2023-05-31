@@ -7,15 +7,16 @@
                 Cadastro de Produtos
             </div>
             <div class="card-body">
-                <form action="/Produtos/SalvarDados" method="post">
+                <form action="/Produtos/SalvarDados" method="post" enctype="multipart/form-data">
                     <label>Descrição de Produtos</label>
                     <input type="text" class="form-control" name="DESCRICAO" />
                     <br />
                     <label>Valor</label>
                     <input type="text" name="VALOR" class="form-control"/>
                     <br />
-
-
+                    <label>Imagem do Produto</label>
+                    <input type="file" name="Imagem" class="form-control" /> 
+                    <br />
                     <label>Ativo</label>
                     <select name="ATIVO" class="form-control">
                         <option value="true">Ativo</option>
